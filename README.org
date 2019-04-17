@@ -12,3 +12,22 @@ This node package is required and needs to be available in path for the layer to
 
 The layer uses the ctable package to display eveything in a table and uses the names package to excapsulate everything in namespaces since ELisp doesn't directly support namespaces.
 
+** Installation
+
+To install the layer, clone it into the private repo:
+
+#+begin_src bash
+git clone https://github.com/anmoljagetia/leetcode-emacs-layer.git ~/.emacs.d/private/myleetcode
+#+end_src
+
+Once the layer has been cloned, add it to the =dotspacemacs-configuration-layers= like the following:
+
+#+begin_src elisp
+  dotspacemacs-configuration-layers
+    '(
+      myleetcode
+      .
+      .
+      .
+      
+#+end_src
