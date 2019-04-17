@@ -1,0 +1,14 @@
+* Leetcode Emacs Layer
+
+This layer adds the functionality to use leetcode from within Emacs. This layer uses the wonderful package available at [[https://github.com/ginqi7/leetcode-emacs][leetcode-emacs]]. The package depends on the following, which in turn makes the layer depend on the following:
+
+** Dependencies
+
+1. [[https://github.com/skygragon/leetcode-cli][leetcode-cli]]
+
+This node package is required and needs to be available in path for the layer to work. You can very easily also add plugins. There are also prebuilt binaries available [[https://github.com/skygragon/leetcode-cli/releases][here]].
+
+2. Emacs packages ctable and names
+
+The layer uses the ctable package to display eveything in a table and uses the names package to excapsulate everything in namespaces since ELisp doesn't directly support namespaces.
+
