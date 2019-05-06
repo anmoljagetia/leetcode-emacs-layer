@@ -1,16 +1,22 @@
 * Leetcode Emacs Layer
 
-This layer adds the functionality to use leetcode from within Emacs. This layer uses the wonderful package available at [[https://github.com/ginqi7/leetcode-emacs][leetcode-emacs]]. The package depends on the following, which in turn makes the layer depend on the following:
+This layer adds the functionality to use leetcode from within Emacs. This layer uses the wonderful package available at [[https://github.com/kaiwk/leetcode.el][leetcode.el]]. The package depends on the following, which in turn makes the layer depend on the following:
 
 ** Dependencies
 
-1. [[https://github.com/skygragon/leetcode-cli][leetcode-cli]]
+1. dash.el
+2. request.el
+3. request-deferred.el
+4. graphql.el
+5. spinner.el
 
-This node package is required and needs to be available in path for the layer to work. You can very easily also add plugins. There are also prebuilt binaries available [[https://github.com/skygragon/leetcode-cli/releases][here]].
+This layer depends in the following packages. They are automatically included and installed when this layer is included for installation.
 
-2. Emacs packages ctable and names
+*** External Dependencies
 
-The layer uses the ctable package to display eveything in a table and uses the names package to excapsulate everything in namespaces since ELisp doesn't directly support namespaces.
+1. cURL 
+
+This package needs the curl package to make calls to the leetcode API for interactions.
 
 ** Installation
 
@@ -31,3 +37,33 @@ Once the layer has been cloned, add it to the =dotspacemacs-configuration-layers
       .
       
 #+end_src
+
+** Usage
+   
+You can choose to set your LeetCode account and password like this:
+
+#+BEGIN_SRC emacs-lisp
+(setq leetcode-account "your-account")
+(setq leetcode-password "your-password")
+#+END_SRC
+
+Put password as plain text into your emacs config may not be a good idea, you can either read your password from somewhere else, or you can ignore this setting completely, a prompt will be given everytime you enter ~M-x leetcode~.
+
+You can also set your preferred LeetCode programming language by setting leetcode-prefer-language:
+
+#+begin_src emacs-lisp
+(setq leetcode-prefer-language "python3")
+#+end_src
+
+** Keymap
+   
+|---------+---------------------------+----------------------------------------------------------------------|
+| keymap  | command                   | effect                                                               |
+|---------+---------------------------+----------------------------------------------------------------------|
+| =a L l= | leetcode                  | This starts the leetcode application                                 |
+| =a L d= | leetcode-show-descri      | Shows the problem description in a new buffer.                       |
+|         |                           | This can also be accessed using the =TAB= key in the leetcode-buffer |
+| =a L r= | leetcode-problems-refresh | Refreshed the problem buffer                                         |
+| =a L t= | leetcode-try              | Tries the code with the test input                                   |
+| =a L u= | leetcode-submit           | Submits the code in the buffer for submission                        |
+|---------+---------------------------+----------------------------------------------------------------------|
