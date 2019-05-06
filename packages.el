@@ -1,22 +1,35 @@
 (defconst myleetcode-packages
   '(
-    ctable
-    names
+    dash
+    request
+    request-deferred
+    graphql
+    spinner
     (leetcode :location (recipe
                          :fetcher github
-                         :repo "ginqi7/leetcode-emacs"))
+                         :repo "kaiwk/leetcode.el"))
     ))
 
-(defun myleetcode/init-ctable ()
-  (use-package ctable))
+(defun myleetcode/init-dash ()
+  (use-package dash))
 
-(defun myleetcode/init-names ()
-  (use-package names))
+(defun myleetcode/init-request ()
+  (use-package request))
+
+(defun myleetcode/init-request-deferred ()
+  (use-package request-deferred))
+
+(defun myleetcode/init-graphql ()
+  (use-package graphql))
+
+(defun myleetcode/init-spinner ()
+  (use-package spinner))
 
 (defun myleetcode/init-leetcode ()
   (use-package leetcode
-    :after names
     :config
     (setq
-     leetcode-path "/tmp/"
-     leetcode-language "python")))
+     leetcode-account "<username>"
+     leetcode-password "<password-here>")
+    (define-key leetcode--problems-mode-map (kbd "TAB") 'leetcode-show-descri)
+    ))
