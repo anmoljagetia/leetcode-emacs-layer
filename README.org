@@ -57,13 +57,13 @@ You can also set your preferred LeetCode programming language by setting leetcod
 
 ** Keymap
    
-|---------+---------------------------+----------------------------------------------------------------------|
-| keymap  | command                   | effect                                                               |
-|---------+---------------------------+----------------------------------------------------------------------|
-| =a L l= | leetcode                  | This starts the leetcode application                                 |
-| =a L d= | leetcode-show-descri      | Shows the problem description in a new buffer.                       |
-|         |                           | This can also be accessed using the =TAB= key in the leetcode-buffer |
-| =a L r= | leetcode-problems-refresh | Refreshed the problem buffer                                         |
-| =a L t= | leetcode-try              | Tries the code with the test input                                   |
-| =a L u= | leetcode-submit           | Submits the code in the buffer for submission                        |
-|---------+---------------------------+----------------------------------------------------------------------|
+|---------+---------------------------+---------------------------------------------------------------------------------------|
+| keymap  | command                   | effect                                                                                |
+|---------+---------------------------+---------------------------------------------------------------------------------------|
+| =a L l= | leetcode                  | This starts the leetcode application                                                  |
+| =a L d= | leetcode-show-descri      | Shows the problem description in a new buffer.                                        |
+|         |                           | This can also be accessed using the =TAB= key or the =RET= key in the leetcode-buffer |
+| =a L r= | leetcode-problems-refresh | Refreshed the problem buffer                                                          |
+| =a L t= | leetcode-try              | Tries the code with the test input                                                    |
+| =a L u= | leetcode-submit           | Submits the code in the buffer for submission                                         |
+|---------+---------------------------+---------------------------------------------------------------------------------------|
