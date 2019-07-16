@@ -31,6 +31,6 @@
     (setq
      leetcode-account "<username>"
      leetcode-password "<password-here>")
-    (define-key leetcode--problems-mode-map (kbd "TAB") 'leetcode-show-descri)
-    (define-key leetcode--problems-mode-map (kbd "<return>") 'leetcode-show-descri)
+    (define-key leetcode--problems-mode-map (kbd "TAB") 'leetcode-show-description)
+    (define-key leetcode--problems-mode-map (kbd "<return>") 'leetcode-show-description)
     ))
