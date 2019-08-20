@@ -4,11 +4,10 @@ This layer adds the functionality to use leetcode from within Emacs. This layer 
 
 ** Dependencies
 
-1. dash.el
-2. request.el
-3. request-deferred.el
-4. graphql.el
-5. spinner.el
+1. request.el
+2. request-deferred.el
+3. graphql.el
+4. spinner.el
 
 This layer depends in the following packages. They are automatically included and installed when this layer is included for installation.
 
@@ -40,19 +39,13 @@ Once the layer has been cloned, add it to the =dotspacemacs-configuration-layers
 
 ** Usage
    
-You can choose to set your LeetCode account and password like this:
+The first time you enter ~M-x leetcode~, Emacs will prompt you to input account and password. If login successful, Emacs will save it into a file. If you are interested in what happend here, you can check [[https://www.gnu.org/software/emacs/manual/html_mono/auth.html][auth-source.el]].
 
-#+BEGIN_SRC emacs-lisp
-(setq leetcode-account "your-account")
-(setq leetcode-password "your-password")
-#+END_SRC
-
-Put password as plain text into your emacs config may not be a good idea, you can either read your password from somewhere else, or you can ignore this setting completely, a prompt will be given everytime you enter ~M-x leetcode~.
-
-You can also set your preferred LeetCode programming language by setting leetcode-prefer-language:
+You can set your preferred LeetCode programming language and SQL by setting =leetcode-prefer-language= and =leetcode-prefer-sql=:
 
 #+begin_src emacs-lisp
 (setq leetcode-prefer-language "python3")
+(setq leetcode-prefer-sql "mysql")
 #+end_src
 
 ** Keymap

@@ -1,6 +1,5 @@
 (defconst myleetcode-packages
   '(
-    dash
     request
     request-deferred
     graphql
@@ -10,10 +9,7 @@
                          :repo "kaiwk/leetcode.el"))
     ))
 
-(defun myleetcode/init-dash ()
-  (use-package dash))
-
-(defun myleetcode/init-request ()
+(defun myleetcode/post-init-request ()
   (use-package request))
 
 (defun myleetcode/init-request-deferred ()
@@ -28,9 +24,6 @@
 (defun myleetcode/init-leetcode ()
   (use-package leetcode
     :config
-    (setq
-     leetcode-account "<username>"
-     leetcode-password "<password-here>")
     (define-key leetcode--problems-mode-map (kbd "TAB") 'leetcode-show-description)
     (define-key leetcode--problems-mode-map (kbd "<return>") 'leetcode-show-description)
     ))
