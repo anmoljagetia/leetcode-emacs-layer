@@ -10,16 +10,16 @@
     ))
 
 (defun myleetcode/post-init-request ()
-  (use-package request))
+  )
 
 (defun myleetcode/init-request-deferred ()
-  (use-package request-deferred))
+  )
 
 (defun myleetcode/init-graphql ()
-  (use-package graphql))
+  )
 
 (defun myleetcode/init-spinner ()
-  (use-package spinner))
+  )
 
 (defun myleetcode/init-leetcode ()
   (use-package leetcode
