@@ -51,12 +51,12 @@ You can set your preferred LeetCode programming language and SQL by setting =lee
 ** Keymap
    
 |---------+---------------------------+---------------------------------------------------------------------------------------|
-| keymap  | command                   | effect                                                                                |
+| keymap  | command                       | effect                                                                                |
 |---------+---------------------------+---------------------------------------------------------------------------------------|
-| =a L l= | leetcode                  | This starts the leetcode application                                                  |
-| =a L d= | leetcode-show-descri      | Shows the problem description in a new buffer.                                        |
-|         |                           | This can also be accessed using the =TAB= key or the =RET= key in the leetcode-buffer |
-| =a L r= | leetcode-problems-refresh | Refreshed the problem buffer                                                          |
-| =a L t= | leetcode-try              | Tries the code with the test input                                                    |
-| =a L u= | leetcode-submit           | Submits the code in the buffer for submission                                         |
+| =a L l= | leetcode                      | This starts the leetcode application                                                  |
+| =a L d= | leetcode-show-current-problem | Shows the problem description in a new buffer.                                        |
+|         |                               | This can also be accessed using the =TAB= key or the =RET= key in the leetcode-buffer |
+| =a L r= | leetcode-refresh              | Refreshed the problem buffer                                                          |
+| =a L t= | leetcode-try                  | Tries the code with the test input                                                    |
+| =a L u= | leetcode-submit               | Submits the code in the buffer for submission                                         |
 |---------+---------------------------+---------------------------------------------------------------------------------------|
