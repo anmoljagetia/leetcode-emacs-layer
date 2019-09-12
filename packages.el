@@ -1,17 +1,17 @@
 (defconst myleetcode-packages
-  '(request
-    request-deferred
+  '(dash
     graphql
     spinner
+    aio
     leetcode))
 
-(defun myleetcode/post-init-request ())
-
-(defun myleetcode/init-request-deferred ())
+(defun myleetcode/init-dash ())
 
 (defun myleetcode/init-graphql ())
 
 (defun myleetcode/init-spinner ())
+
+(defun myleetcode/init-aio ())
 
 (defun myleetcode/init-leetcode ()
   (use-package leetcode
