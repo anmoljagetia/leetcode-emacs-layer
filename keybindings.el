@@ -1,4 +1,4 @@
-;; Labels the app as Leetcode se it doesn't appear as "prefix" in the menu
+;; Labels the app as Leetcode so it doesn't appear as "prefix" in the menu
 (spacemacs/declare-prefix "a L" "Leetcode")
 
 ;; The remaining useful keybindings to using Leetcode
